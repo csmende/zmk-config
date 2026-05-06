@@ -3,7 +3,7 @@ on: [push, pull_request, workflow_dispatch]
 
 # Add this section to force Node 24
 env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true
 
 jobs:
   build:

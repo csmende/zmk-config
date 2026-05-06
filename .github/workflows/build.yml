@@ -1,6 +1,10 @@
 name: Build ZMK firmware
 on: [push, pull_request, workflow_dispatch]
 
+# Add this section to force Node 24
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
